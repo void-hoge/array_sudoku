@@ -3,9 +3,10 @@
 #include <iostream>
 
 void solver::solve(board& bd) {
-	if (bd.isfinish() == true) {
-		return;
-	}
+	// if (bd.isfinish() == true) {
+	// 	std::cout << "" << '\n';
+	// 	return;
+	// }
 	const unsigned idx = bd.get_first_blank();
 	if (idx == ~0) {
 		return;
@@ -23,12 +24,12 @@ void solver::solve(board& bd) {
 }
 
 bool solver::recursion(board& bd) {
-	if (bd.isfinish() == true) {
-		return true;
-	}
+	// if (bd.isfinish() == true) {
+	// 	return true;
+	// }
 	const unsigned idx = bd.get_first_blank();
 	if (idx == ~0) {
-		return false;
+		return true;
 	}
 	const unsigned idx_x = idx/(SIZE*SIZE);
 	const unsigned idx_y = idx%(SIZE*SIZE);

@@ -5,7 +5,7 @@
 int main() {
 	std::cout << "sudoku solver" << '\n';
 	board bd;
-	std::array<std::array<unsigned, SIZE*SIZE>, SIZE*SIZE> hoge;
+	std::array<std::array<unsigned, SIZE*SIZE>, SIZE*SIZE> hoge = {};
 	hoge[0] = {0,6,0,0,2,0,0,3,0};
 	hoge[1] = {0,0,1,0,0,5,0,0,4};
 	hoge[2] = {7,0,0,8,0,0,2,0,0};
