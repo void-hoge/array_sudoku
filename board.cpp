@@ -135,7 +135,11 @@ void board::show() const{
 			if ((j % SIZE) == 0) {
 				std::cout << '|';
 			}
-			std::cout << std::setw(3) << cells[i][j];
+			if (cells[i][j] == 0) {
+				std::cout << std::setw(3) << ' ';
+			}else{
+				std::cout << std::setw(2) << cells[i][j] << ' ';
+			}
 		}
 		std::cout << '|' << '\n';
 	}

@@ -7,6 +7,9 @@ void solver::solve(board& bd) {
 		return;
 	}
 	const unsigned idx = bd.get_first_blank();
+	if (idx == ~0) {
+		return;
+	}
 	const unsigned idx_x = idx/(SIZE*SIZE);
 	const unsigned idx_y = idx%(SIZE*SIZE);
 	std::vector<unsigned> movable = bd.get_movable(idx_x, idx_y);
